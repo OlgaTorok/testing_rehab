@@ -64,13 +64,13 @@
                         <div class="form-group">
                             @foreach ($steps as $step)
                             {{-- <div class="form-group"> --}}
-                                <label for="description"> Step</label>
-                                
+                                <label for="description">Step</label>
+
                                     <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                                 {{-- @endforeach --}}
 
                                 <label for="tip_id">Tip</label>
-                                @foreach ($steps as $step)
+                                @foreach ($tips as $tip)
                                     <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                                  @endforeach
                             {{-- </div> --}}

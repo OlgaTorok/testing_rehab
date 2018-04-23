@@ -47,7 +47,8 @@
                         <div class="form-group">
                             <label for="step_id">Step</label>
                             <input type="text" class="form-control" id="step_id" name="step_id" value="{{ old('step_id', $activity->step->description) }}" />
-                             <label for="tip_id">Tip</label>
+
+                            <label for="tip_id">Tip</label>
                             <input type="text" class="form-control" id="tip_id" name="tip_id" value="{{ old('tip_id', $activity->tip->description) }}" />
                         </div>
 
