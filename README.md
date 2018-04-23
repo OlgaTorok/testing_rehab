@@ -1,1 +1,2 @@
-# Laravel Project (nrh)
+# Laravel Project
+
