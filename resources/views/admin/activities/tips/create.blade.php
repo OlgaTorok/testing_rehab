@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3>Add/Edit Steps for Activity: {{ $activity->title }}</h3>
+                    <h3>Add/Edit Tips for Activity: {{ $activity->title }}</h3>
                 </div>
 
                 <div class="panel-body">
@@ -19,17 +19,17 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('admin.activities.steps_store', $activity->id) }}">
+                    <form method="POST" action="{{ route('admin.activities.tips_store', $activity->id) }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                        @foreach ($steps as $step)
+                        @foreach ($tips as $tip)
                             <input type="checkbox"
-                                   name="steps[]"
-                                   value="{{ $step->id }}"
-                                   id="step_{{ $step->id }}"
-                                   {{ ($activity->steps->contains($step))?"checked":"" }}
+                                   name="tips[]"
+                                   value="{{ $tip->id }}"
+                                   id="tip_{{ $tip->id }}"
+                                   {{ ($activity->steps->contains($tip))?"checked":"" }}
                                    />
-                            <label for="step_{{ $step->id }}">{{ $step->description }}</label>
+                            <label for="tip_{{ $tip->id }}">{{ $tips->description }}</label>
                         @endforeach
 
                         <a href="{{ route('admin.activities.show', array('activity' => $activity)) }}" class="btn btn-default">Back</a>

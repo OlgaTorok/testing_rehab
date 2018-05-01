@@ -62,8 +62,21 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="{{$steps->step_id}}"> Step</label>
-                            <input type="text" class="form-control" id="step_id" name="step_id" value="{{ old('$steps->step_id->desctiption') }}" />
+                            @foreach ($steps as $step)
+                            {{-- <div class="form-group"> --}}
+                                <label for="description">Step</label>
+
+                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                                {{-- @endforeach --}}
+
+                                <label for="tip_id">Tip</label>
+                                @foreach ($tips as $tip)
+                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                                 @endforeach
+                            {{-- </div> --}}
+                             @endforeach
+                            <button type="submit" class="btn btn-secondary pull-right">Add new step</button>
+
                         </div>
 
                         <div class="form-group">

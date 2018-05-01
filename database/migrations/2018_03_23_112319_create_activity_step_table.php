@@ -14,9 +14,11 @@ class CreateActivityStepTable extends Migration
     public function up()
     {
         Schema::create('activity_step', function (Blueprint $table) {
-            $table->increments('id');
+           $table->increments('id');
            $table->integer('activity_id')->unsigned();
            $table->integer('step_id')->unsigned();
+           $table->integer('tip_id')->unsigned();
+
            $table->timestamps();
 
            $table->foreign('activity_id')->references('id')->on('activities');

@@ -10,7 +10,6 @@
                 </div>
                 <div class="panel-body">
 
-
                     <table class="table table-hover table-responsive">
                         <tbody>
                             <tr>
@@ -33,9 +32,10 @@
                                 <td>Category</td>
                                 <td>{{ $activity->category->cat_name }}</td>
                             </tr>
-                            
+
                             <tr>
                                 <td>Step</td>
+<<<<<<< HEAD
                                 <td>
                                     <table>
                                         <thead>
@@ -52,6 +52,12 @@
                                         </tbody>
                                     </table>
                                 </td>
+=======
+                                @foreach ($activity->steps as $step)
+                                    <td>{{ $step->description }}</td>
+                                  
+                                @endforeach
+>>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
                             </tr>
                             <tr>
                                 <td>Picture</td>
@@ -86,12 +92,24 @@
                         </tbody>
                     </table>
                     @endif
+
+                    <h3>Tips</h3>
+                    @if (count($activity->tips) == 0)
+                    <p>There are no Tips for this activity</p>
+                    @else
+                    <table class="table">
+                        <tbody>
+                            @foreach ($activity->tips as $tip)
+                                <tr>
+                                    <td>{{ $tip->description }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    @endif
                     <a href="{{ route('admin.activities.steps_create', $activity->id) }}" class="btn btn-primary">Add steps</a>
 
-
-                </div>  <!-- panel-body -->
-
-
+                  </div>  <!-- panel-body -->
             </div>  <!-- panel -->
         </div>  <!-- col-md-8 col-md-offset-2 -->
     </div>  <!-- row -->

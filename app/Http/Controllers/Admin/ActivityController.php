@@ -110,7 +110,7 @@ class ActivityController extends Controller
         $session = $request->session()->flash('message', 'Activity added successfully!');
 
         return redirect()->route('admin.activities.index');
-    
+
     }
 
     /**
@@ -205,13 +205,18 @@ class ActivityController extends Controller
      */
     public function steps_create($id)
     {
+<<<<<<< HEAD
         $steps = Step::all();
+=======
+      $activity = Activity::findOrFail($id);
+          $steps = Step::all();
+>>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
 
-        return view('admin.activities.create')->with(array(
-            'activity' => $activity,
-            'steps' => $steps,
-        ));
-    }
+          return view('admin.activities.steps.create')->with(array(
+              'activity' => $activity,
+              'steps' => $steps,
+          ));
+      }
 
     /**
      * Store a newly created resource in storage.
@@ -222,7 +227,12 @@ class ActivityController extends Controller
     public function steps_store(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
             'steps' => 'required',
+=======
+            'steps' => 'required'
+
+>>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
         ]);
 
         $activity = new Activity();
@@ -233,4 +243,36 @@ class ActivityController extends Controller
 
         return redirect()->route('admin.activities.show', $id);
     }
-}
+
+    public function tips_create($id)
+        {
+          $activity = Activity::findOrFail($id);
+              $tips = Tip::all();
+
+              return view('admin.activities.tips.create')->with(array(
+                  'activity' => $activity,
+                  'tips' => $tips
+              ));
+          }
+
+        /**
+         * Store a newly created resource in storage.
+         *
+         * @param  \Illuminate\Http\Request  $request
+         * @return \Illuminate\Http\Response
+         */
+        public function tips_store(Request $request)
+        {
+            $request->validate([
+                'tips' => 'required'
+            ]);
+
+            $activity = new Activity();
+            $activity->tips()->sync($request->input('tips'));
+            $activity->tips()->save();
+
+            $session = $request->session()->flash('message', 'Activity tips stored successfully!');
+
+            return redirect()->route('admin.activities.show', $id);
+        }
+    }
