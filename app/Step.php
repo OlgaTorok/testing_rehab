@@ -10,4 +10,9 @@ class Step extends Model
     {
         return $this->belongsToMany('App\Activity')->withTimestamps();
     }
+
+    public function tip()
+    {
+    	return $this->belongsTo('App\Step');
+    }
 }

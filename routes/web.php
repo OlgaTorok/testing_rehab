@@ -23,22 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/home', 'Admin\HomeController@index')->name('admin.home');
 Route::get('/user/home', 'User\HomeController@index')->name('user.home');
 
-
-
-
-//-----------------------------------------//
-//    Setting for storing images           //
-//-----------------------------------------//
-// Storage::disk('local')->put('file.txt', 'Contents');
-
 //-----------------------------------------//
 //    Setting the routes for the ADMIN     //
 //-----------------------------------------//
-// Route::resource('admin/user', 'Admin\UserController', ['as' => 'admin']);
-// Route::resource('admin/activities', 'Admin\ActivityController', ['as' => 'admin']);
-// Route::resource('admin/steps', 'Admin\StepController', ['as' => 'admin']);
-// Route::resource('admin/categories', 'Admin\CategoryController', ['as' => 'admin']);
-// Route::resource('admin/tip', 'Admin\TipController', ['as' => 'admin']);
 
 //Users
 Route::get   ('/admin/users/',          'Admin\UserController@index'  )->name('admin.users.index');

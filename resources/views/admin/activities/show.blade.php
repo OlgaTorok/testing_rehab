@@ -36,10 +36,22 @@
                             
                             <tr>
                                 <td>Step</td>
-                                @foreach ($activity->steps as $step)
-                                    <td>{{ $step->description }}</td>
-                                    <td>{{ $step->tip->description }}</td>
-                                @endforeach
+                                <td>
+                                    <table>
+                                        <thead>
+                                            <th>Description</th>
+                                            <th>Tip</th>
+                                        </thead>
+                                        <tbody>
+                                        @foreach ($activity->steps as $step)
+                                            <tr>
+                                                <td>{{ $step->description }}</td>
+                                                <td>{{ $step->tip->description }}</td>
+                                            </tr>
+                                        @endforeach                                    
+                                        </tbody>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Picture</td>

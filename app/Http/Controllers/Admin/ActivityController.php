@@ -206,7 +206,6 @@ class ActivityController extends Controller
     public function steps_create($id)
     {
         $steps = Step::all();
-        // $tips = Tip::all();
 
         return view('admin.activities.create')->with(array(
             'activity' => $activity,
@@ -224,7 +223,6 @@ class ActivityController extends Controller
     {
         $request->validate([
             'steps' => 'required',
-            // 'tips' => 'required'
         ]);
 
         $activity = new Activity();

@@ -62,36 +62,30 @@
                         </div>
 
                         <div class="form-group">
-                            @foreach ($steps as $step)
-                            {{-- <div class="form-group"> --}}
-                                <label for="description"> Step</label>
-                                
-                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-                                {{-- @endforeach --}}
-
-                                <label for="tip_id">Tip</label>
-                                @foreach ($steps as $step)
-                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-                                 @endforeach
-                            {{-- </div> --}}
-                             @endforeach
-                            <button type="submit" class="btn btn-secondary pull-right">Add new step</button>
-
+                            <label for="{{$steps->step_id}}"> Step</label>
+                            <input type="text" class="form-control" id="step_id" name="step_id" value="{{ old('$steps->step_id->desctiption') }}" />
                         </div>
 
+                        <div class="form-group">
+                            <label for="tip_id">Tip</label>
+                            @foreach ($tips as $tip)
+                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                             @endforeach
+                        </div>
+                        <button type="" class="btn btn-secondary pull-right" id="new">Add new step</button>
 
                         <br>
                         <h4>Rating Tips</h4>
                         <div class="form-group">
                             @foreach ($ratings as $rating)
-                                {{-- @if (Auth::admin()->rating()->where('rating_id', $rating->id)->get()->count() > 0) --}}
+                                @if (Auth::admin()->rating()->where('rating_id', $rating->id)->get()->count() > 0)
                                 <label for="rating_id">{{ $rating->name }}</label>
                                 <select class="form-control" id="rating_id" name="rating_id">
-                                {{-- <input type="text" class="form-control" id="{{ $tip->id }}" name="{{ $tip->id }}" value="{{ old('$tip->description') }}" /> --}}
-                                {{-- <label> value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->name }}</label> --}}
-                                {{-- @endif --}}
+                                <input type="text" class="form-control" id="{{ $tip->id }}" name="{{ $tip->id }}" value="{{ old('$tip->tip_id') }}" />
+                                <label> value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->name }}</label>
+                                @endif
                             @endforeach
-                            {{-- </select> --}}
+                            </select>
                         </div>
 
                         <div class="form-group">

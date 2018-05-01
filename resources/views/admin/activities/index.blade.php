@@ -23,14 +23,14 @@
                             <thead>
                                 <th>Title</th>
                                 <th>Short Description</th>
-                                {{-- <th>Description</th> --}}
-                                {{-- <th>Step</th> --}}
-                                {{-- <th>Tip</th> --}}
-                                {{-- <th>Picture</th> --}}
-                                {{-- <th>Level</th> --}}
+                                <th>Description</th>
+                                <th>Step</th>
+                                <th>Tip</th>
+                                <th>Picture</th>
+                                <th>Level</th>
                                 <th>Category</th>
-                                {{-- <th>Rating</th> --}}
-                                {{-- <th>Emoji</th> --}}
+                                <th>Rating</th>
+                                <th>Emoji</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>
@@ -38,14 +38,14 @@
                                     <tr>
                                         <td>{{ $activity->title }}</td>
                                         <td>{{ $activity->short_descript }}</td>
-                                        {{-- <td>{{ $activity->description }}</td> --}}
-                                        {{-- <td>{{ $activity->step->description }}</td> --}}
-                                        {{-- <td>{{ $activity->tip->name }}</td> --}}
-                                        {{-- <td>{{ $activity->picture }}</td> --}}
-                                        {{-- <td>{{ $activity->level->name }}</td> --}}
+                                        <td>{{ $activity->description }}</td>
+                                        <!-- <td>{{ $activity->$step->description }}</td> -->
+                                        <td>{{ $activity->tip->name }}</td>
+                                        <td>{{ $activity->picture }}</td>
+                                        <td>{{ $activity->level->name }}</td>
                                         <td>{{ $activity->category->cat_name }}</td>
-                                        {{-- <td>{{ $activity->rating->name }}</td> --}}
-                                        {{-- <td>{{ $activity->emoji->name}}</td> --}}
+                                        <td>{{ $activity->rating->name }}</td>
+                                        <td>{{ $activity->emoji->name}}</td>
 
                                         <td>
                                             <a href="{{ route('admin.activities.show', array('activity' => $activity)) }}"

@@ -16,4 +16,9 @@ class Tip extends Model
     {
         return $this->belongsTo('App\Rating')->withTimestamps();
     }
+
+    public function step()
+    {
+    	return $this->hasOne('App\Step');
+    }
 }
