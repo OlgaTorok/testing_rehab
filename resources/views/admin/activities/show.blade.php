@@ -34,30 +34,32 @@
                             </tr>
 
                             <tr>
-                                <td>Step</td>
-<<<<<<< HEAD
+                                <td>Steps</td>
                                 <td>
                                     <table>
-                                        <thead>
-                                            <th>Description</th>
-                                            <th>Tip</th>
-                                        </thead>
                                         <tbody>
                                         @foreach ($activity->steps as $step)
                                             <tr>
                                                 <td>{{ $step->description }}</td>
-                                                <td>{{ $step->tip->description }}</td>
                                             </tr>
-                                        @endforeach                                    
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </td>
-=======
-                                @foreach ($activity->steps as $step)
-                                    <td>{{ $step->description }}</td>
-                                  
-                                @endforeach
->>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
+                            </tr>
+                            <tr>
+                                <td>Tips</td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        @foreach ($activity->steps as $step)
+                                            <tr>
+                                                <td>{{ $step->tip->description }}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Picture</td>
@@ -93,7 +95,7 @@
                     </table>
                     @endif
 
-                    <h3>Tips</h3>
+                    <!-- <h3>Tips</h3>
                     @if (count($activity->tips) == 0)
                     <p>There are no Tips for this activity</p>
                     @else
@@ -106,7 +108,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    @endif
+                    @endif -->
                     <a href="{{ route('admin.activities.steps_create', $activity->id) }}" class="btn btn-primary">Add steps</a>
 
                   </div>  <!-- panel-body -->

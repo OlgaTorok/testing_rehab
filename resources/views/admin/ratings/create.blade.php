@@ -21,18 +21,10 @@
                     @endif
                     <form method="POST" action="{{ route('admin.ratings.store') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" />
-                        </div>
-                        <div class="form-group">
-                             <label for="tip_id">Tip</label>
-                             <select class="form-control" id="tip_id" name="tip_id">
-                             @foreach ($tips as $tip)
-                                 <option value="{{ $tip->id }}" {{ (old('tip_id') == $tip->id)?"selected":"" }}>{{ $tip->description }}</option>
-                             @endforeach
-                             </select>
                         </div>
 
                         <a href="{{ route('admin.ratings.index') }}" class="btn btn-default">Cancel</a>

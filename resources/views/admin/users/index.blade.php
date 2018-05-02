@@ -25,7 +25,6 @@
                             <th>Email</th>
                             <th>Admin</th>
                             <th>Consent</th>
-                          <!--  <th>Password</th> -->
                             <th>Action</th>
                         </thead>
 
@@ -36,7 +35,6 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->is_admin }}</td>
                                 <td>{{ $user->consent }}</td>
-                              <!--  <td>{{ $user->password }}</td> -->
 
                                 <td>
                                     <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-default btn-user-view">View</a>

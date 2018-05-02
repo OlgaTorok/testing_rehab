@@ -3,10 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>Add/Edit Steps for Activity: {{ $activity->title }}</h3>
+                    <a href="{{ route('admin.activities.show', array('activity' => $activity)) }}" class="btn btn-default">Back</a>
                 </div>
 
                 <div class="panel-body">
@@ -19,7 +20,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('admin.activities.steps_store', $activity->id) }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('admin.activities.steps_store', $activity->id) }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         @foreach ($steps as $step)
@@ -30,9 +31,10 @@
                                    {{ ($activity->steps->contains($step))?"checked":"" }}
                                    />
                             <label for="step_{{ $step->id }}">{{ $step->description }}</label>
+                            <br />
                         @endforeach
 
-                        <a href="{{ route('admin.activities.show', array('activity' => $activity)) }}" class="btn btn-default">Back</a>
+
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                     </form>

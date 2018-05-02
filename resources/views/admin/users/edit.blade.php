@@ -38,11 +38,6 @@
                             <input type="text" class="form-control" id="is_admin" name="is_admin" value="{{ old('is_admin', $user->is_admin) }}" />
                         </div>
 
-                      <!--  <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="text" class="form-control" id="password" name="password" value="{{ old('password', $user->password) }}" />
-                        </div> -->
-
                         <div class="form-group">
                             <label for="fact_tip">Consent</label>
                             <input type="text" class="form-control" id="consent" name="consent" value="{{ old('consent', $user->consent) }}" />

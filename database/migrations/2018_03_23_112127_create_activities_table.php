@@ -18,17 +18,19 @@ class CreateActivitiesTable extends Migration
             $table->string('title');
             $table->string('description', 255);
             $table->string('short_descript');
-            $table->string('url')->unique()->nullable($value = true);
+            $table->string('image')->unique()->nullable($value = true);
             $table->integer('level_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->integer('rating_id')->unsigned();
             $table->integer('emoji_id')->unsigned();
+            // $table->integer('tip_id')->unsigned()->nullable($value = true);
             $table->timestamps();
 
             $table->foreign('level_id')->references('id')->on('levels');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('rating_id')->references('id')->on('ratings');
             $table->foreign('emoji_id')->references('id')->on('emojis');
+            // $table->foreign('tip_id')->references('id')->on('tips');
         });
     }
 

@@ -15,10 +15,11 @@ class CreateStepsTable extends Migration
     {
         Schema::create('steps', function (Blueprint $table) {
             $table->increments('id');
+            // $table->string('title');
             $table->string('description', 255);
             $table->integer('tip_id')->unsigned()->nullable($value = true);
             $table->timestamps();
-            
+
             $table->foreign('tip_id')->references('id')->on('tips');
         });
     }

@@ -33,11 +33,6 @@
                                 <td>{{ $user->consent }}</td>
                             </tr>
 
-                          <!--  <tr>
-                                <td>Password</td>
-                                <td>{{ $user->password }}</td>
-                            </tr> -->
-
                         </tbody>
                     </table>
 

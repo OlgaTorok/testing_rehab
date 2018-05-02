@@ -17,7 +17,6 @@ class CreateActivityStepTable extends Migration
            $table->increments('id');
            $table->integer('activity_id')->unsigned();
            $table->integer('step_id')->unsigned();
-           $table->integer('tip_id')->unsigned();
 
            $table->timestamps();
 

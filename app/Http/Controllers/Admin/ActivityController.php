@@ -85,7 +85,7 @@ class ActivityController extends Controller
            'title' => 'required|max:191',
            'description' => 'required',
            'short_descript' => 'required|max:20',
-           'url' => 'required',
+           'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
            'level_id' => 'required|integer|min:0',
            'category_id' => 'required|integer|min:0',
            'rating_id' => 'required|integer|min:0',
@@ -96,16 +96,27 @@ class ActivityController extends Controller
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
         $activity->short_descript = $request->input('short_descript');
-        $activity->url = $request->input('url');
+        // $activity->picture = $request->input('picture');
         $activity->level_id = $request->input('level_id');
         $activity->category_id = $request->input('category_id');
         $activity->rating_id = $request->input('rating_id');
         $activity->emoji_id = $request->input('emoji_id');
-        $activity->save();
+
 
         // $activity->create($request->all());
         // $step->activity()->associate($activity);
         // $step->save();
+
+        //Save Our Image
+        if ($request->hasFile('picture')) {
+            $image = $request->file('picture');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/'. $filename);
+            Image::make($image)->resize(800, 400)->save($location);
+
+            $activity->image = $filename;
+        }
+        $activity->save();
 
         $session = $request->session()->flash('message', 'Activity added successfully!');
 
@@ -158,7 +169,7 @@ class ActivityController extends Controller
             'title' => 'required|max:191',
             'description' => 'required',
             'short_descript' => 'required|max:20',
-            'url' => 'required',
+            'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'level_id' => 'required|integer|min:0',
             'category_id' => 'required|integer|min:0',
             'rating_id' => 'required|integer|min:0',
@@ -168,7 +179,7 @@ class ActivityController extends Controller
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
         $activity->short_descript = $request->input('short_descript');
-        $activity->url = $request->input('url');
+        $activity->picture = $request->input('picture');
         $activity->level_id = $request->input('level_id');
         $activity->category_id = $request->input('category_id');
         $activity->rating_id = $request->input('rating_id');
@@ -205,12 +216,8 @@ class ActivityController extends Controller
      */
     public function steps_create($id)
     {
-<<<<<<< HEAD
-        $steps = Step::all();
-=======
       $activity = Activity::findOrFail($id);
           $steps = Step::all();
->>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
 
           return view('admin.activities.steps.create')->with(array(
               'activity' => $activity,
@@ -227,12 +234,8 @@ class ActivityController extends Controller
     public function steps_store(Request $request)
     {
         $request->validate([
-<<<<<<< HEAD
-            'steps' => 'required',
-=======
             'steps' => 'required'
 
->>>>>>> a78b1810c4c9b498807b0d4bee2d375f1d282812
         ]);
 
         $activity = new Activity();
