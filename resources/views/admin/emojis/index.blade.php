@@ -22,14 +22,14 @@
                         <table class = "table table-hover table-responsive">
                             <thead>
                                 <th>Name</th>
-                                <th>Image</th>
+                                <th>Picture</th>
                             </thead>
 
                             <tbody>
                                 @foreach ($emojis as $emoji)
                                     <tr>
                                        <td>{{ $emoji->name }}</td>
-                                        <td>{{ $emoji->url }}</td> 
+                                        <td>{{ $emoji->picture }}</td>
 
                                       <td>
                                             <a href="{{ route('admin.emojis.edit', array('emoji' => $emoji)) }}"
@@ -63,6 +63,10 @@
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" />
+                            </div>
+                            <div class="form-group">
+                                <label for="picture">Picture</label>
+                                <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
                             </div>
                             <a href="{{ route('admin.emojis.index') }}" class="btn btn-default">Cancel</a>
                             <button type="submit" class="btn btn-primary pull-right">Submit</button>

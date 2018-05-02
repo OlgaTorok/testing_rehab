@@ -38,8 +38,8 @@
                         </div>
 
                         <div class="form-group">
-                             <label for="url">Picture</label>
-                             <input type="text" class="form-control" id="url" name="url" value="{{ old('url') }}" />
+                            <label for="picture">Picture</label>
+                            <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
                          </div>
 
                         <div class="form-group">
@@ -65,14 +65,22 @@
                             <div class="form-group">
                                 <label for="description">Step</label>
 
-                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
 
                                 <label for="tip_id">Tip</label>
-                                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                             </div>
-                            <!-- <button type="submit" class="btn btn-secondary pull-right">Add new step</button> -->
-
+                             <button type="submit" class="btn btn-secondary pull-right">Add new step</button>
                         </div>
+
+                        <!-- <div class="form-group">
+                            <label for="step_id">Step</label>
+                            <select class="form-control" id="step_id" name="step_id">
+                            @foreach ($steps as $step)
+                                <option value="{{ $step->id }}" {{ (old('step_id')==$step->id)?"selected":"" }}>{{ $step->description }}</option>
+                            @endforeach
+                            </select>
+                        </div> -->
 
                         <!-- <div class="form-group">
                             <label for="tip_id">Tip</label>
@@ -84,10 +92,11 @@
 
                         <br>
                         <h4>Rating Tips</h4>
+                        <!-- tips to be added but because of an error it was left to show ratings for now -->
                         <div class="form-group">
                             @foreach ($ratings as $rating)
                                 <label for="tip_id">{{ $rating->name }}</label>
-                                <input type="text" class="form-control" id="{{ $tip->id }}" name="{{ $tip->id }}" value="{{ old('$tip->tip_id') }}" />
+                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                             @endforeach
                             </select>
                         </div>

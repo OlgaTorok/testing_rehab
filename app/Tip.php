@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tip extends Model
 {
-    
-    public function activities()
-    {
-        return $this->hasMany('App\Activity')->withTimestamps();
-    }
+
+    // public function activities()
+    // {
+    //     return $this->hasMany('App\Activity')->withTimestamps();
+    // }
 
     public function ratings()
     {

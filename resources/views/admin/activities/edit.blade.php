@@ -38,8 +38,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="url">url</label>
-                            <input type="text" class="form-control" id="url" name="url" value="{{ old('url', $activity->url) }}" />
+                            <label for="picture">Picture</label>
+                            <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture', $activity->picture) }}" />
                         </div>
 
                         <!-- code for drop down menu fro step and tip to go here -->

@@ -29,8 +29,8 @@
                             <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $emoji->name) }}" />
                         </div>
                         <div class="form-group">
-                            <label for="url">Image</label>
-                            <input type="text" class="form-control" id="url" name="url" value="{{ old('url', $emoji->url) }}" />
+                            <label for="picture">Image</label>
+                            <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture', $emoji->picture) }}" />
                         </div>
                         <a href="{{ route('admin.emojis.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>

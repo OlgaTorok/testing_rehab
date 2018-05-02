@@ -16,7 +16,7 @@ class CreateEmojisTable extends Migration
         Schema::create('emojis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('url')->unique();
+            $table->string('picture')->unique();
             $table->timestamps();
         });
     }
