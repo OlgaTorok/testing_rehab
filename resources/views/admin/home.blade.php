@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Admin Dashboard</div>
+                <!-- <div class="panel-heading">Admin Dashboard</div> -->
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -26,13 +26,13 @@
                         </div> -->
                     </div>
                     <div class="jumbotron text-center">
-                        <h1 class="display-4">National Rehabilitation Hospital</h1>
+                        <!-- <h1 class="display-4">National Rehabilitation Hospital</h1>
                         <p class="lead">The National Rehabilitation Hospital (NRH) provides a
                             comprehensive range of specialist rehabilitation services to patients
                             from throughout Ireland who, as a result of an accident, illness or
                             injury have acquired a physical or cognitive disability and require
                             specialist rehabilitation.</p>
-                        <hr class="my-4">
+                        <hr class="my-4"> -->
                         <p>The Objectives of the <b>Paediatric Programme</b> are to achieve the maximum rehabilitation
                             potential of each child – physically, emotionally and cognitively, to involve the
                             children/young people and their families/carers in the rehabilitation process,
@@ -51,5 +51,6 @@
             </div>
         </div>
     </div>
+
 </div>
 @endsection

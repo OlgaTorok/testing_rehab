@@ -34,11 +34,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav mr-auto">
                         <!-- &nbsp; -->
-                        <form class="form-inline my-2 my-lg-0" action="/search" method="POST" role="search">
+                        <!-- <form class="form-inline my-2 my-lg-0" action="/search" method="POST" role="search">
                             {{ csrf_field() }}
                             <input class="form-control mr-sm-2" type="search" name="find" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                        </form> -->
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
