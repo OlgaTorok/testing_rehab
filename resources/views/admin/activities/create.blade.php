@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('admin.activities.store') }}">
+                    <form enctype="multipart/form-data" method="POST" action="{{ route('admin.activities.store') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
@@ -39,7 +39,7 @@
 
                         <div class="form-group">
                             <label for="picture">Picture</label>
-                            <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
+                            <input type="file" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
                          </div>
 
                         <div class="form-group">
@@ -61,7 +61,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <div class="form-group">
                                 <label for="description">Step</label>
 
@@ -71,7 +71,7 @@
                                 <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                             </div>
                              <button type="submit" class="btn btn-secondary pull-right">Add new step</button>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="form-group">
                             <label for="step_id">Step</label>
@@ -92,11 +92,11 @@
 
                         <br>
                         <h4>Rating Tips</h4>
-                        <!-- tips to be added but because of an error it was left to show ratings for now -->
                         <div class="form-group">
+                            <label for="rating_id">Rating</label>
+                            <select class="form-control" id="rating_id" name="rating_id">
                             @foreach ($ratings as $rating)
-                                <label for="tip_id">{{ $rating->name }}</label>
-                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
+                                <option value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->name }}</option>
                             @endforeach
                             </select>
                         </div>

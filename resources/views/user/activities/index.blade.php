@@ -59,17 +59,17 @@
                     @if ($activity->category_id == $category->id)
                     <div class="col-3 col-sm-6 col-md-4 col-lg-3">
                         <div class="card card-menu">
-                            <img class="card-img-top" src="{{ url('../public/img/beach.png') }}" alt="Card image cap" style="width: 100%" />
+                            <img class="card-img-top" src="../../public/img/{{ $activity->picture }}" alt="Card image cap" style="width: 100%" />
                             <div class="content">
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-10">
-                                        <div class="circle"><img src="{{ url('../public/img/face_black.svg') }}"></div>
+                                        <!-- <div class="circle"><img src="{{ url('../public/img/face_black.svg') }}"></div> -->
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body" style="padding: 10px;">
-                                <h3 class="card-title">{{ $activity->title }}</h3>
+                                <h4 class="card-title">{{ $activity->title }}</h4>
                                 <p class="card-text">{{ $activity->short_descript }}</p>
                                 <a href="{{ route('user.activities.show', $activity->id) }}" class="btn btn-primary">Go</a>
                             </div>  <!-- end card-body -->

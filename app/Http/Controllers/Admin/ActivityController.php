@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Validator;
+use Image;
 use App\Http\Controllers\Controller;
 use App\Activity;
 use App\Tip;
@@ -13,6 +14,7 @@ use App\Level;
 use App\Rating;
 use App\Emoji;
 use App\Step;
+
 
 class ActivityController extends Controller
 {
@@ -96,7 +98,7 @@ class ActivityController extends Controller
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
         $activity->short_descript = $request->input('short_descript');
-        // $activity->picture = $request->input('picture');
+        $activity->picture = $request->input('picture');
         $activity->level_id = $request->input('level_id');
         $activity->category_id = $request->input('category_id');
         $activity->rating_id = $request->input('rating_id');
@@ -168,7 +170,7 @@ class ActivityController extends Controller
         $request->validate([
             'title' => 'required|max:191',
             'description' => 'required',
-            'short_descript' => 'required|max:20',
+            'short_descript' => 'required|max: 20',
             'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'level_id' => 'required|integer|min:0',
             'category_id' => 'required|integer|min:0',
@@ -247,16 +249,35 @@ class ActivityController extends Controller
         return redirect()->route('admin.activities.show', $id);
     }
 
-    public function tips_create($id)
-        {
-          $activity = Activity::findOrFail($id);
-              $tips = Tip::all();
 
-              return view('admin.activities.tips.create')->with(array(
-                  'activity' => $activity,
-                  'tips' => $tips
-              ));
-          }
+    public function upload_img(Request $request, $id)
+    {
+        if($request->hasFile('picture')) {
+            $img = $request->file('picture');
+            $filename = time() . '.' . $img->getClientOriginalExtension();
+            Image::make($img)->resize(640, 426)->save( public_path('../../public/img/' . $filename) );
+        }
+
+        $activity = Activity::findOrFail($id);
+        $activity->picture = $filename;
+        $activity->save();
+
+        return view('admin.activities.create')->with(array(
+            'activity' => $activity,
+            'picture' => $img,
+        ));
+    }
+
+    // public function tips_create($id)
+    //     {
+    //       $activity = Activity::findOrFail($id);
+    //           $tips = Tip::all();
+    //
+    //           return view('admin.activities.tips.create')->with(array(
+    //               'activity' => $activity,
+    //               'tips' => $tips
+    //           ));
+    //       }
 
         /**
          * Store a newly created resource in storage.
@@ -264,18 +285,18 @@ class ActivityController extends Controller
          * @param  \Illuminate\Http\Request  $request
          * @return \Illuminate\Http\Response
          */
-        public function tips_store(Request $request)
-        {
-            $request->validate([
-                'tips' => 'required'
-            ]);
-
-            $activity = new Activity();
-            $activity->tips()->sync($request->input('tips'));
-            $activity->tips()->save();
-
-            $session = $request->session()->flash('message', 'Activity tips stored successfully!');
-
-            return redirect()->route('admin.activities.show', $id);
-        }
+    //     public function tips_store(Request $request)
+    //     {
+    //         $request->validate([
+    //             'tips' => 'required'
+    //         ]);
+    //
+    //         $activity = new Activity();
+    //         $activity->tips()->sync($request->input('tips'));
+    //         $activity->tips()->save();
+    //
+    //         $session = $request->session()->flash('message', 'Activity tips stored successfully!');
+    //
+    //         return redirect()->route('admin.activities.show', $id);
+    //     }
     }

@@ -49,6 +49,7 @@ Route::delete('/admin/activities/{id}',      'Admin\ActivityController@destroy')
 
 Route::get   ('/admin/activities/{id}/create',      'Admin\ActivityController@steps_create'   )->name('admin.activities.steps_create');
 Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@steps_store'  )->name('admin.activities.steps_store');
+Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@upload_img'  )->name('admin.activities.upload_img');
 
 //Route::get   ('/admin/activities/{id}/create',      'Admin\ActivityController@tips_create'   )->name('admin.activities.tips_create');
 //Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@tips_store'  )->name('admin.activities.tips_store');

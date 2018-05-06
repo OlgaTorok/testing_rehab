@@ -27,7 +27,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff;    // ol
+$body-bg:               #ffd805;    // ot
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -370,11 +370,11 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #6897bb; // ol
+$navbar-default-bg:                #ff5b05; // ot
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #fff;    //ol
+$navbar-default-link-color:                #fff;    // ot
 $navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
@@ -717,9 +717,9 @@ $panel-border-radius:         $border-radius-base !default;
 $panel-inner-border:          #ddd !default;
 $panel-footer-bg:             #f5f5f5 !default;
 
-$panel-default-text:          $gray-dark !default;
+$panel-default-text:          #fff;   // ot
 $panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    #f5f5f5 !default;
+$panel-default-heading-bg:    #05a9ff;  // ot
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;

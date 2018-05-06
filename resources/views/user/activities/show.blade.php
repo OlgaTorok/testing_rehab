@@ -56,9 +56,9 @@
                             <p style="text-align: center;"><b>How did the activity go?</b></p>
                             <div class="row">
                                 <div class="rate" style="text-align: center">
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ $activity->tip->description }}">Too easy</button></div>
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ $activity->tip->description }}">Just Right</button></div>
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ $activity->tip->description }}">Too Hard</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Too easy</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Just Right</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Too Hard</button></div>
                                 </div>
                             </div>
                         </p>

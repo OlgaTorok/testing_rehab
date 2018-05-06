@@ -18,7 +18,7 @@ class CreateActivitiesTable extends Migration
             $table->string('title');
             $table->string('short_descript');
             $table->string('description', 255);
-            $table->string('picture')->unique()->nullable($value = true);
+            $table->string('picture')->default('default.jpg');
             $table->integer('level_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->integer('rating_id')->unsigned();
