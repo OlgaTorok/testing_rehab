@@ -68,4 +68,18 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    // when users register
+    public function redirectTo() {
+
+        $user = $this->guard()->user();
+
+        if ($user->hasRole('admin')) {
+            $this->redirectTo = '/admin/home';
+        }
+        else if ($user->hasRole('user')) {
+            $this->redirectTo = '/user/home';
+        }
+        return $this->redirectTo;
+    }
 }

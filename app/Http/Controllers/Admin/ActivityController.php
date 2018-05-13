@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\File;
 use Validator;
 use Image;
 use App\Http\Controllers\Controller;
@@ -252,6 +253,7 @@ class ActivityController extends Controller
 
     public function upload_img(Request $request, $id)
     {
+        // OT - error the folder is not writable so we need to change permission
         if($request->hasFile('picture')) {
             $img = $request->file('picture');
             $filename = time() . '.' . $img->getClientOriginalExtension();

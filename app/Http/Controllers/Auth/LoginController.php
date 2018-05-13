@@ -38,7 +38,9 @@ class LoginController extends Controller
     }
 
     public function redirectTo() {
+
         $user = $this->guard()->user();
+        
         if ($user->hasRole('admin')) {
             $this->redirectTo = '/admin/home';
         }
