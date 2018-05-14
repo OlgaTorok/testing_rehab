@@ -27,10 +27,10 @@ class HomeController extends Controller
         $user = Auth::user();
 
         if ($user->hasRole('admin')) {
-            $redirectTo = 'admin.home';
+            $this->redirectTo = 'admin.home';
         }
         else if ($user->hasRole('user')) {
-            $redirectTo = 'user.home';
+            $this->redirectTo = 'user.home';
         }
         return redirect()->route($redirectTo);
     }
