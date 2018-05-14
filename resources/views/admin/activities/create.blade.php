@@ -50,8 +50,7 @@
                             @endforeach
                             </select>
                         </div>
-
-                        <!--  <input type="text" class="form-control" id="category_id" name="category_id" value="{{ old('category_id') }}" /> -->
+                        
                         <div class="form-group">
                             <label for="category_id">Category</label>
                             <select class="form-control" id="category_id" name="category_id">
@@ -61,42 +60,13 @@
                             </select>
                         </div>
 
-                        <!-- <div class="form-group">
-                            <div class="form-group">
-                                <label for="description">Step</label>
-
-                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-
-                                <label for="tip_id">Tip</label>
-                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-                            </div>
-                             <button type="submit" class="btn btn-secondary pull-right">Add new step</button>
-                        </div> -->
-
-                        <!-- <div class="form-group">
-                            <label for="step_id">Step</label>
-                            <select class="form-control" id="step_id" name="step_id">
-                            @foreach ($steps as $step)
-                                <option value="{{ $step->id }}" {{ (old('step_id')==$step->id)?"selected":"" }}>{{ $step->description }}</option>
-                            @endforeach
-                            </select>
-                        </div> -->
-
-                        <!-- <div class="form-group">
-                            <label for="tip_id">Tip</label>
-                            @foreach ($tips as $tip)
-                                <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-                             @endforeach
-                        </div>
-                        <button type="" class="btn btn-secondary pull-right" id="new">Add new step</button> -->
-
                         <br>
                         <h4>Rating Tips</h4>
                         <div class="form-group">
                             <label for="rating_id">Rating</label>
                             <select class="form-control" id="rating_id" name="rating_id">
                             @foreach ($ratings as $rating)
-                                <option value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->name }}</option>
+                                <option value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->id }}</option>
                             @endforeach
                             </select>
                         </div>
