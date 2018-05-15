@@ -13,6 +13,6 @@ class Step extends Model
 
     public function tip()
     {
-    	return $this->belongsTo('App\Step');
+    	return $this->belongsTo('App\Tip')->withTimestamps();
     }
 }

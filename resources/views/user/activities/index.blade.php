@@ -59,7 +59,7 @@
                     @if ($activity->category_id == $category->id)
                     <div class="col-3 col-sm-6 col-md-4 col-lg-3">
                         <div class="card card-menu">
-                            <img class="card-img-top" src="../../public/img/{{ $activity->picture }}" alt="Card image cap" style="width: 100%" />
+                            <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" />
                             <div class="content">
                                 <div class="row">
                                     <div class="col-md-2"></div>

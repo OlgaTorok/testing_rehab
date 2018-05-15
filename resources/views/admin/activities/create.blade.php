@@ -37,10 +37,7 @@
                             <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                         </div>
 
-                        <div class="form-group">
-                            <label for="picture">Picture</label>
-                            <input type="file" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
-                         </div>
+
 
                         <div class="form-group">
                             <label for="level_id">Level</label>
@@ -50,7 +47,7 @@
                             @endforeach
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="category_id">Category</label>
                             <select class="form-control" id="category_id" name="category_id">
@@ -79,6 +76,11 @@
                             @endforeach
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for="picture">Picture</label>
+                            <input type="file" id="picture" name="picture" value="{{ old('picture') }}" />
+                         </div>
 
 
                         <a href="{{ route('admin.activities.index') }}" class="btn btn-default">Cancel</a>
