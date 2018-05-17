@@ -23,9 +23,22 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/home', 'Admin\HomeController@index')->name('admin.home');
 Route::get('/user/home', 'User\HomeController@index')->name('user.home');
 
+
+
+
+//-----------------------------------------//
+//    Setting for storing images           //
+//-----------------------------------------//
+// Storage::disk('local')->put('file.txt', 'Contents');
+
 //-----------------------------------------//
 //    Setting the routes for the ADMIN     //
 //-----------------------------------------//
+// Route::resource('admin/user', 'Admin\UserController', ['as' => 'admin']);
+// Route::resource('admin/activities', 'Admin\ActivityController', ['as' => 'admin']);
+// Route::resource('admin/steps', 'Admin\StepController', ['as' => 'admin']);
+// Route::resource('admin/categories', 'Admin\CategoryController', ['as' => 'admin']);
+// Route::resource('admin/tip', 'Admin\TipController', ['as' => 'admin']);
 
 //Users
 Route::get   ('/admin/users/',          'Admin\UserController@index'  )->name('admin.users.index');
@@ -46,13 +59,8 @@ Route::post  ('/admin/activities/store',     'Admin\ActivityController@store'  )
 Route::get   ('/admin/activities/{id}/edit', 'Admin\ActivityController@edit'   )->name('admin.activities.edit');
 Route::put   ('/admin/activities/{id}',      'Admin\ActivityController@update' )->name('admin.activities.update');
 Route::delete('/admin/activities/{id}',      'Admin\ActivityController@destroy')->name('admin.activities.destroy');
-
-Route::get   ('/admin/activities/{id}/create',      'Admin\ActivityController@steps_create'   )->name('admin.activities.steps_create');
-Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@steps_store'  )->name('admin.activities.steps_store');
-Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@upload_img'  )->name('admin.activities.upload_img');
-
-//Route::get   ('/admin/activities/{id}/create',      'Admin\ActivityController@tips_create'   )->name('admin.activities.tips_create');
-//Route::post  ('/admin/activities/{id}/store',       'Admin\ActivityController@tips_store'  )->name('admin.activities.tips_store');
+Route::get   ('/admin/activities/{id}/steps/create',      'Admin\ActivityController@steps_create'   )->name('admin.activities.steps_create');
+Route::post  ('/admin/activities/{id}/steps/store',       'Admin\ActivityController@steps_store'  )->name('admin.activities.steps_store');
 
 //Steps
 Route::get   ('/admin/steps/',          'Admin\StepController@index'  )->name('admin.steps.index');
@@ -122,15 +130,15 @@ Route::resource('user/activities', 'User\ActivityController', ['as' => 'user']);
 // Route::resource('user/tip', 'User\TipController', ['as' => 'user']);
 
 
-Route::get('/user/activities', 'User\ActivityController@index')->name('user.activities.index');
+Route::get('/user/activities/', 'User\ActivityController@index')->name('user.activities.index');
 Route::get('/user/activities/{id}', 'User\ActivityController@show')->name('user.activities.show');
 
 // Route::post('/user/search', 'User\SearchController@filter');
-Route::any('/search',function(){
-    $find = Input::get ( 'find' );
-    $activity = Activity::where('title','LIKE','%'.$find.'%')->get();
-    if(count($activity) > 0)
-        return view('/user/activities')->withDetails($activity)->withQuery ( $find );
-    else
-        return view ('/user/activities')->withMessage('No Details found. Try to search again !');
-});
+// Route::any('/search',function(){
+//     $find = Input::get ( 'find' );
+//     $activity = Activity::where('title','LIKE','%'.$find.'%')->get();
+//     if(count($activity) > 0)
+//         return view('/user/activities')->withDetails($activity)->withQuery ( $find );
+//     else
+//         return view ('/user/activities')->withMessage('No Details found. Try to search again !');
+// });

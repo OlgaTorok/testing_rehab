@@ -67,6 +67,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        $user->roles()->attach(Role::where('name', 'admin')->first());
+        return $user;
     }
 
     // when users register
