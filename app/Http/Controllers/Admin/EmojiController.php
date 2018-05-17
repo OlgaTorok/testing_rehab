@@ -105,7 +105,7 @@ class EmojiController extends Controller
         $emoji = Emoji::findOrFail($id);
 
         $request->validate([
-            'name' => 'required|max:191'
+            'name' => 'required|max:191',
             'url' => 'required|image'
         ]);
 
