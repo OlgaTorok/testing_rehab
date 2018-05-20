@@ -51,12 +51,12 @@ class EmojiController extends Controller
     {
         $request->validate([
             'name' => 'required|max:191',
-            'url' => 'required|image'
+            'picture' => 'required|max:191'
           ]);
 
         $emoji = new Emoji();
         $emoji->name = $request->input('name');
-        $emoji->url= $request->input('url');
+        $emoji->picture= $request->input('picture');
         $emoji->save();
         $session = $request->session()->flash('message', 'Emoji added successfully!');
 
@@ -106,11 +106,11 @@ class EmojiController extends Controller
 
         $request->validate([
             'name' => 'required|max:191',
-            'url' => 'required|image'
+            'picture' => 'required|max:191'
         ]);
 
         $emoji->name = $request->input('name');
-        $emoji->url = $request->input('url');
+        $emoji->picture = $request->input('picture');
         $emoji->save();
 
         $session = $request->session()->flash('message', 'Emoji added successfully!');

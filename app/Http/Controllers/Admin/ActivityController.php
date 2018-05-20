@@ -95,13 +95,8 @@ class ActivityController extends Controller
         $activity->rating_id = $request->input('rating_id');
         $activity->emoji_id = $request->input('emoji_id');
 
-
-        // $activity->create($request->all());
-        // $step->activity()->associate($activity);
-        // $step->save();
-
-        //Save Our Image
-        //If teh image exists
+        //Save the Image
+        //If the image exists
         if ($request->hasFile('picture')) {
           // get the file
             $image = $request->file('picture');

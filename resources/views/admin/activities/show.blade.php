@@ -95,7 +95,7 @@
                     </table>
                     @endif
 
-                    <!-- <h3>Tips</h3>
+                    {{-- <!-- <h3>Tips</h3>
                     @if (count($activity->tips) == 0)
                     <p>There are no Tips for this activity</p>
                     @else
@@ -108,7 +108,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    @endif -->
+                    @endif --> --}}
                     <a href="{{ route('admin.activities.steps_create', $activity->id) }}" class="btn btn-primary">Add steps</a>
 
                   </div>  <!-- panel-body -->
