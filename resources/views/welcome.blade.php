@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #ff5b05;
+                background-color: #4c8f92;
                 /* background-color: #6897bb; */
                 color: #fff;
                 font-family: 'Raleway', sans-serif;
@@ -51,7 +51,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -80,7 +80,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    National Rehabilitation Hospital
+                    NRH Application
                 </div>
 
                 <!-- <div class="links">

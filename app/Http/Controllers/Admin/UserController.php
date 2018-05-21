@@ -47,14 +47,14 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:191',
             'email' => 'required|max:191',
-            'password' => 'required|max:191',
+            // 'password' => 'required|max:191',
             'is_admin' => 'required|boolean',
             'consent' => 'required|boolean'
         ]);
         $user = new User();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->password = $request->input('password');
+        // $user->password = $request->input('password');
         $user->is_admin = $request->input('is_admin');
         $user->consent = $request->input('consent');
         $user->save();
@@ -100,13 +100,13 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:191',
             'email' => 'required|max:191',
-            'password' => 'required|max:191',
+            // 'password' => 'required|max:191',
             'is_admin' => 'required|boolean',
             'consent' => 'required|boolean'
         ]);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->password = $request->input('password');
+        // $user->password = $request->input('password');
         $user->is_admin = $request->input('is_admin');
         $user->consent = $request->input('consent');
         $user->save();

@@ -208,15 +208,15 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function steps_create($id)
-    {
-      $activity = Activity::findOrFail($id);
-          $steps = Step::all();
+        public function steps_create($id)
+        {
+            $activity = Activity::findOrFail($id);
+            $steps = Step::all();
 
-          return view('admin.activities.steps.create')->with(array(
-              'activity' => $activity,
-              'steps' => $steps,
-          ));
+            return view('admin.activities.steps.create')->with(array(
+                'activity' => $activity,
+                'steps' => $steps
+            ));
       }
 
     /**
@@ -225,16 +225,16 @@ class ActivityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function steps_store(Request $request)
+    public function steps_store(Request $request, $id)
     {
         $request->validate([
             'steps' => 'required'
 
         ]);
 
-        $activity = new Activity();
+        $activity = Activity::find($id);
         $activity->steps()->sync($request->input('steps'));
-        $activity->steps()->save();
+        // $activity->steps()->save();
 
         $session = $request->session()->flash('message', 'Activity steps stored successfully!');
 

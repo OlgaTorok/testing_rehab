@@ -22,7 +22,7 @@
                         <table class="table table-responsive table-hover ">
                             <thead>
                                 <th>Description</th>
-                                <th>Tip Name</th>
+                                <th>Tip</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>

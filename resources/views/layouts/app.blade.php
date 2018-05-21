@@ -51,6 +51,8 @@
                             <!-- Added in the order they need to be added -->
                                 <li><a href="{{ route('admin.users.index') }}"><i class="fa fa-user" aria-hidden="true"></i> Users </a></li>
                                 <li><a href="{{ route('admin.activities.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Activities </a></li>
+                                <li><a href="{{ route('admin.steps.index') }}"><i class="fa fa-clone" aria-hidden="true"></i> Steps </a></li>
+                                <li><a href="{{ route('admin.tips.index') }}"><i class="fa fa-edit" aria-hidden="true"></i> Tips </a></li>
                                 <li><a href="{{ route('admin.categories.index') }}"><i class="fa fa-book" aria-hidden="true"></i> Categories </a></li>
                                 <li><a href="{{ route('admin.levels.index') }}"><i class="fa fa-server" aria-hidden="true"></i> Levels </a></li>
                                 <li><a href="{{ route('admin.ratings.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Ratings </a></li>

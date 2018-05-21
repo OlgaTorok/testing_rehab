@@ -43,7 +43,21 @@
                                     </table>
                                 </td>
                             </tr>
-                            
+                            <tr>
+                                <td>Tips</td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            {{-- need to check this --}}
+                                        @foreach ($activity->steps()->tip as $tip)
+                                            <tr>
+                                                <td>{{ $tip->description }}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>Picture</td>
                                 <td>{{ $activity->picture }}</td>

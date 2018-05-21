@@ -42,9 +42,9 @@
                             <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture', $activity->picture) }}" />
                         </div>
 
-                        <!-- code for drop down menu from step and tip to go here -->
+                        <!-- code for drop down menu fro step and tip to go here -->
 
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label for="step_id">Step</label>
                             <input type="text" class="form-control" id="step_id" name="step_id" value="{{ old('step_id', $activity->step->description) }}" />
 
@@ -57,7 +57,7 @@
                         <div class="form-group">
                             <label for="level_id">Level</label>
                             <input type="text" class="form-control" id="level_id" name="level_id" value="{{ old('level_id', $activity->level->name) }}" />
-                        </div> --}}
+                        </div>
 
                         <!-- code for drop down menu for levels to go here -->
                         <div class="form-group">
@@ -70,8 +70,6 @@
                             <label for="rating_id">Rating</label>
                             <input type="text" class="form-control" id="rating_id" name="rating_id" value="{{ old('rating_id', $activity->rating->name) }}" />
                         </div>
-
-                    
 
                         <!-- code for drop down menu for emojis to go here -->
                         <div class="form-group">

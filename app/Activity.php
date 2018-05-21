@@ -12,7 +12,7 @@ class Activity extends Model
     }
 
     public function steps(){
-        return $this->belongsToMany('App\Step');
+        return $this->belongsToMany('App\Step')->withTimestamps();
     }
 
     public function category()
