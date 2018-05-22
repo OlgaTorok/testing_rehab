@@ -60,12 +60,13 @@
                     @if ($activity->category_id == $category->id)
                     <div class="col-3 col-sm-6 col-md-4 col-lg-3">
                         <div class="card card-menu">
-                            <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" />
+                            <img class="card-img-top" src="{{ url('../public/images/beach.png') }}" alt="Card image cap" style="width: 100%" />
+                            {{-- <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" /> --}}
                             <div class="content">
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-10">
-                                        <!-- <div class="circle"><img src="{{ url('../public/img/face_black.svg') }}"></div> -->
+                                        {{-- <div class="circle"><img src="{{ url('../public/images/face_black.svg') }}"></div> --}}
                                     </div>
                                 </div>
                             </div>

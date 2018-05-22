@@ -22,7 +22,6 @@
                         <table class="table table-responsive table-hover ">
                             <thead>
                                 <th>Description</th>
-                                <th>Tip</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>
@@ -30,7 +29,6 @@
                                     <tr>
                                         <td>{{ $step->description }}</td>
                                         <!-- Here we add the code for the tip description -->
-                                        <td>{{ $step->tip_id }}</td>
 
                                         <td>
                                             <a href="{{ route('admin.steps.show', array('step' => $step)) }}" class="btn btn-default">View</a>

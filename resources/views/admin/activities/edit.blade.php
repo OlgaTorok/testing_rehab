@@ -71,8 +71,6 @@
                             <input type="text" class="form-control" id="rating_id" name="rating_id" value="{{ old('rating_id', $activity->rating->name) }}" />
                         </div>
 
-                    
-
                         <!-- code for drop down menu for emojis to go here -->
                         <div class="form-group">
                             <label for="emoji_id">Emoji</label>
