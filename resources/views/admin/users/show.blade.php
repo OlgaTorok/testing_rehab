@@ -64,8 +64,8 @@
                         </tbody>
                     </table>
                     @endif
-                    <a href="{{ route('admin.users.acrivities_create',$user->id) }}"
-                       class="btn btn-primary">Add Activity</a>
+                    {{-- <a href="{{ route('admin.users.acrivities_create',$user->id) }}"
+                       class="btn btn-primary">Add Activity</a> --}}
 
                 </div>  <!-- panel-body -->
             </div>  <!-- panel -->
