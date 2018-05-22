@@ -22,13 +22,14 @@
                     <table class = "table table-hover table-responsive">
                         <thead>
                             <th>Description</th>
+                            <th>Action</th>
                         </thead>
 
                         <tbody>
                             @foreach ($tips as $tips)
                             <tr>
-                                <th>{{ $tips->description }}</th>
-                                <td>
+                                <td width="85%">{{ $tips->description }}</td>
+                                <td width="15%">
                                     <a href="{{ route('admin.tips.edit', array('tips' => $tips)) }}"
                                            class="btn btn-primary">Edit</a>
                                     <form style="display:inline-block" method="POST" action="{{ route('admin.tips.destroy', array('tips' => $tips)) }}">
@@ -38,6 +39,7 @@
                                     </form>
                                 </td>
                             </tr>
+
                         @endforeach
                         </tbody>
                     </table>

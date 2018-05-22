@@ -37,8 +37,8 @@
                     </table>
 
                     <a href="{{ route('admin.users.index') }}" class="btn btn-default">Back</a>
-                    <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
-                       class="btn btn-warning">Edit</a>
+                    {{-- <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
+                       class="btn btn-warning">Edit</a> --}}
                     <form style="display:inline-block"
                           method="POST"
                           action="{{ route('admin.users.destroy', array('user' => $user)) }}">
@@ -64,8 +64,8 @@
                         </tbody>
                     </table>
                     @endif
-                    {{-- <a href="{{ route('admin.users.acrivities_create',$user->id) }}"
-                       class="btn btn-primary">Add Activity</a> --}}
+                    <a href="{{ route('admin.users.activities_create',$user->id) }}"
+                       class="btn btn-primary">Add Activity</a>
 
                 </div>  <!-- panel-body -->
             </div>  <!-- panel -->

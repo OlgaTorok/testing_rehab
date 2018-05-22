@@ -30,6 +30,7 @@
                                    {{ ($user->activities->contains($activity))?"checked":"" }}
                                    />
                             <label for="activity_{{ $activity->id }}">{{ $activity->title }}</label>
+                            <br />
                         @endforeach
                         <a href="{{ route('admin.users.show', array('user' => $user)) }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
