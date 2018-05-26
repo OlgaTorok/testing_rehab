@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('admin.activities.store') }}">
+                    <form enctype="multipart/form-data" method="POST" action="{{ route('admin.activities.store') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
