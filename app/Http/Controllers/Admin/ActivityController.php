@@ -78,7 +78,7 @@ class ActivityController extends Controller
            'title' => 'required|max:191',
            'description' => 'required',
            'short_descript' => 'required|max:20',
-           // 'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        //    'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
            'level_id' => 'required|integer|min:0',
            'category_id' => 'required|integer|min:0',
            'rating_id' => 'required|integer|min:0',
@@ -89,7 +89,6 @@ class ActivityController extends Controller
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
         $activity->short_descript = $request->input('short_descript');
-        // $activity->picture = $request->input('picture');
         $activity->level_id = $request->input('level_id');
         $activity->category_id = $request->input('category_id');
         $activity->rating_id = $request->input('rating_id');
@@ -99,13 +98,13 @@ class ActivityController extends Controller
         //If the image exists
         if ($request->hasFile('picture')) {
           // get the file
-            $image = $request->file('picture');
+            $picture = $request->file('picture');
             // and rename it using the timestamp and the original extension
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $filename = time() . '.' . $picture->getClientOriginalExtension();
             // create the location of the images
             $location = public_path('images/'. $filename);
             // and create the new image and save it to the location given
-            Image::make($image)->resize(640, 426)->save($location);
+            Image::make($picture)->resize(640, 426)->save($location);
             // add the image to the database in the picture column
             // with the new filename
             $activity->picture = $filename;
@@ -163,7 +162,7 @@ class ActivityController extends Controller
             'title' => 'required|max:191',
             'description' => 'required',
             'short_descript' => 'required|max: 20',
-            'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // 'picture' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'level_id' => 'required|integer|min:0',
             'category_id' => 'required|integer|min:0',
             'rating_id' => 'required|integer|min:0',
@@ -173,7 +172,7 @@ class ActivityController extends Controller
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
         $activity->short_descript = $request->input('short_descript');
-        $activity->picture = $request->input('picture');
+        // $activity->picture = $request->input('picture');
         $activity->level_id = $request->input('level_id');
         $activity->category_id = $request->input('category_id');
         $activity->rating_id = $request->input('rating_id');
@@ -248,7 +247,7 @@ class ActivityController extends Controller
         if($request->hasFile('picture')) {
             $img = $request->file('picture');
             $filename = time() . '.' . $img->getClientOriginalExtension();
-            Image::make($img)->resize(640, 426)->save( public_path('../../public/img/' . $filename) );
+            Image::make($img)->resize(640, 426)->save( public_path('images/' . $filename) );
         }
 
         $activity = Activity::findOrFail($id);
@@ -261,35 +260,4 @@ class ActivityController extends Controller
         ));
     }
 
-    // public function tips_create($id)
-    //     {
-    //       $activity = Activity::findOrFail($id);
-    //           $tips = Tip::all();
-    //
-    //           return view('admin.activities.tips.create')->with(array(
-    //               'activity' => $activity,
-    //               'tips' => $tips
-    //           ));
-    //       }
-
-        /**
-         * Store a newly created resource in storage.
-         *
-         * @param  \Illuminate\Http\Request  $request
-         * @return \Illuminate\Http\Response
-         */
-    //     public function tips_store(Request $request)
-    //     {
-    //         $request->validate([
-    //             'tips' => 'required'
-    //         ]);
-    //
-    //         $activity = new Activity();
-    //         $activity->tips()->sync($request->input('tips'));
-    //         $activity->tips()->save();
-    //
-    //         $session = $request->session()->flash('message', 'Activity tips stored successfully!');
-    //
-    //         return redirect()->route('admin.activities.show', $id);
-    //     }
     }

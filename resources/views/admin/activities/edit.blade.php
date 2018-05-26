@@ -42,22 +42,13 @@
                             <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture', $activity->picture) }}" />
                         </div>
 
-                        <!-- code for drop down menu from step and tip to go here -->
-
-                        {{-- <div class="form-group">
-                            <label for="step_id">Step</label>
-                            <input type="text" class="form-control" id="step_id" name="step_id" value="{{ old('step_id', $activity->step->description) }}" />
-
-                            <label for="tip_id">Tip</label>
-                            <input type="text" class="form-control" id="tip_id" name="tip_id" value="{{ old('tip_id', $activity->tip->description) }}" />
-                        </div>
-
+                        
                         <!-- code for drop down menu for levels to go here -->
 
                         <div class="form-group">
                             <label for="level_id">Level</label>
                             <input type="text" class="form-control" id="level_id" name="level_id" value="{{ old('level_id', $activity->level->name) }}" />
-                        </div> --}}
+                        </div>
 
                         <!-- code for drop down menu for levels to go here -->
                         <div class="form-group">

@@ -28,12 +28,14 @@
                              <label for="description">Description</label>
                              <input type="text" class="form-control" id="description" name="description" value="{{ old('description', $step->description) }}" />
                         </div>
+
                         <!-- OT - tip->description here -->
                         <div class="form-group">
-                            <label for="tip_id">Tip Name</label>
-                            <input type="text" class="form-control" id="tip_id" name="tip_id" value="{{ old('tip_id', $step->tip_id) }}" />
+                            <label for="tip_id">Tip</label>
+                            <input type="text" class="form-control" id="tip_id" name="tip_id" value="{{ old('tip_id', $step->tip->description) }}" />
                         </div>
-                        
+
+                        <a href="{{ route('admin.steps.show', array('step' => $step)) }}" class="btn btn-default">Back</a>
                         <a href="{{ route('admin.steps.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
 

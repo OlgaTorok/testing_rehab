@@ -43,6 +43,11 @@
                          </div>
 
                         <div class="form-group">
+                            <label for="picture">Picture</label>
+                            <input type="file" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
+                         </div>
+
+                        <div class="form-group">
                             <label for="level_id">Level</label>
                             <select class="form-control" id="level_id" name="level_id">
                             @foreach ($levels as $level)

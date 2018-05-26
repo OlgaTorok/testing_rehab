@@ -37,16 +37,16 @@
                     </table>
 
                     <a href="{{ route('admin.users.index') }}" class="btn btn-default">Back</a>
-                    {{-- <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
-                       class="btn btn-warning">Edit</a> --}}
-                    <form style="display:inline-block"
+                     <!-- <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
+                       class="btn btn-warning">Edit</a> -->
+                    <!-- <form style="display:inline-block"
                           method="POST"
                           action="{{ route('admin.users.destroy', array('user' => $user)) }}">
 
                           <input type="hidden" name="_method" value="DELETE">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <a type="submit" class="form-control btn btn-danger">Delete</a>
-                    </form>
+                    </form> -->
 
 
                     <h3>Activities</h3>
@@ -64,9 +64,9 @@
                         </tbody>
                     </table>
                     @endif
+
                     <a href="{{ route('admin.users.activities_create',$user->id) }}"
                        class="btn btn-primary">Add Activity</a>
-
                 </div>  <!-- panel-body -->
             </div>  <!-- panel -->
         </div>  <!-- col-md-8 col-md-offset-2 -->

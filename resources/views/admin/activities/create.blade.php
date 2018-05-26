@@ -30,24 +30,29 @@
                        <div class="form-group">
                             <label for="description"> Description</label>
                             <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
-                        </div> 
+                        </div>
 
 
                        <div class="form-group">
                             <label for="short_descript">Short Description</label>
                             <input type="text" class="form-control" id="short_descript" name="short_descript" value="{{ old('short_descript') }}" />
-                        </div>            
-                         
+                        </div>
+
+                        <div class="form-group">
+                            <label for="picture">Picture</label>
+                            <input type="file" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
+                         </div>
+
                          <div class="form-group">
                             <label for="level_id">Level</label>
                             <select class="form-control" id="level_id" name="level_id">
                             @foreach ($levels as $level)
                                 <option value="{{ $level->id }}" {{ (old('level_id')==$level->id)?"selected":"" }}>{{ $level->name }}</option>
                             @endforeach
-                            </select>                           
-                        </div> 
-            
-                                            
+                            </select>
+                        </div>
+
+
                         <div class="form-group">
                             <label for="category_id">Category</label>
                             <select class="form-control" id="category_id" name="category_id">
@@ -56,7 +61,7 @@
                             @endforeach
                             </select>
                         </div>
-                      
+
                        <div class="form-group">
                             <label for="rating_id">Rating</label>
                             <select class="form-control" id="rating_id" name="rating_id">
@@ -64,8 +69,8 @@
                                 <option value="{{ $rating->id }}" {{ (old('rating_id')==$rating->id)?"selected":"" }}>{{ $rating->name }}</option>
                             @endforeach
                             </select>
-                        </div> 
-                       
+                        </div>
+
                         <div class="form-group">
                             <label for="emoji_id">Emoji</label>
                             <select class="form-control" id="emoji_id" name="emoji_id">
@@ -73,14 +78,15 @@
                                 <option value="{{ $emoji->id }}" {{ (old('emoji_id')==$emoji->id)?"selected":"" }}>{{ $emoji->name }}</option>
                             @endforeach
                             </select>
-                        </div> 
-                                               
+                        </div>
+
+
                         <a href="{{ route('admin.activities.index') }}" class="btn btn-default">Cancel</a>
                         <a href="{{ route('admin.steps.create') }}" class="btn btn-default">Add Steps</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                        
+
                     </form>
-                    
+
                 </div>
             </div>
         </div>

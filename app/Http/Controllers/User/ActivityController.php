@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use App\Activity;
 use App\Step;
 use App\Category;
@@ -13,6 +14,7 @@ use App\Tip;
 use App\Level;
 use App\Rating;
 use App\Emoji;
+use Image;
 
 
 class ActivityController extends Controller
@@ -30,7 +32,6 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        // $activities = Activity::all();
         $categories = Category::all();
         $steps = Step::all();
         $levels = Level::all();

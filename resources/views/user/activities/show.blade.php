@@ -22,22 +22,19 @@
     </div>
 
     <div class="row">
+
         <div class="col-md-9">
             <div class="panel panel-default" style="box-shadow: 2px 5px 8px #dadddf;">
                 <div class="panel-heading">
                     <!-- <img class="card-img-top" src="{{ url('../public/img/robot.png') }}" alt="Card image cap" style="width: 100%" /> -->
                 </div>
                 <div class="panel-body">
-                    <!--Social shares button-->
-                    <a class="activator p-3 mr-2" href="#"><img src="{{ url('../public/img/stars_black.svg') }}" alt="" /></a>
-                    <a class="activator p-3 mr-2" href="#"><img src="{{ url('../public/img/snooze_black.svg') }}" alt="" /></a>
-                    <hr class="hr-light">
                     <!--Title-->
                     <h1 class="card-title">{{ $activity->title }}</h1>
                     <hr class="hr-light">
                     <!--Text-->
                     <ul class="list-group list-group-flush ">
-                        <p class="card-text">{{ $activity->description }}</p>
+                        <p class="card-text"><b>Description: </b> {{ $activity->description }}</p>
                         <hr />
                         <p class="card-text"><b>Category: </b> {{ $activity->category->cat_name }} </p>
                         <hr />

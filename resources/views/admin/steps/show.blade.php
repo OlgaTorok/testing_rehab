@@ -19,7 +19,7 @@
 
                             <tr>
                                 <td>Tip</td>
-                                <td>{{ $step->tip_id}}</td>
+                                <td>{{ $step->tip->description }}</td>
                             </tr>
 
                         </tbody>
