@@ -51,12 +51,12 @@ class StepController extends Controller
     {
         $request->validate([
             'description' => 'required|max:191',
-            'tip_id' => 'integer|min:0',
+            // 'tip_id' => 'integer|min:0',
         ]);
 
         $step = new Step();
         $step->description = $request->input('description');
-        $step->tip_id = $request->input('tip_id');
+        // $step->tip_id = $request->input('tip_id');
         $step->save();
 
         $session = $request->session()->flash('message', 'Step added successfully!');
@@ -108,11 +108,11 @@ class StepController extends Controller
 
         $request->validate([
             'description' => 'required|max:191',
-            'tip_id' => 'integer|min:0',
+            // 'tip_id' => 'integer|min:0',
         ]);
 
         $step->description = $request->input('description');
-        $step->tip_id = $request->input('tip_id');
+        // $step->tip_id = $request->input('tip_id');
         $step->save();
 
         $session = $request->session()->flash('message', 'Step updated successfully!');

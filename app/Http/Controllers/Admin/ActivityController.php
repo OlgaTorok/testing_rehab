@@ -98,13 +98,13 @@ class ActivityController extends Controller
         //If the image exists
         if ($request->hasFile('picture')) {
           // get the file
-            $picture = $request->file('picture');
+            $image = $request->file('picture');
             // and rename it using the timestamp and the original extension
-            $filename = time() . '.' . $picture->getClientOriginalExtension();
+            $filename = time() . '.' . $image->getClientOriginalExtension();
             // create the location of the images
             $location = public_path('images/'. $filename);
             // and create the new image and save it to the location given
-            Image::make($picture)->resize(640, 426)->save($location);
+            Image::make($image)->resize(640, 426)->save($location);
             // add the image to the database in the picture column
             // with the new filename
             $activity->picture = $filename;
@@ -260,4 +260,4 @@ class ActivityController extends Controller
         ));
     }
 
-    }
+}

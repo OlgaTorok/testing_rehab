@@ -56,7 +56,20 @@ class EmojiController extends Controller
 
         $emoji = new Emoji();
         $emoji->name = $request->input('name');
-        $emoji->picture= $request->input('picture');
+
+        if ($request->hasFile('picture')) {
+            // get the file
+              $image = $request->file('picture');
+              // and rename it using the timestamp and the original extension
+              $filename = time() . '.' . $image->getClientOriginalExtension();
+              // create the location of the images
+              $location = public_path('images/'. $filename);
+              // and create the new image and save it to the location given
+              Image::make($image)->resize(61, 40)->save($location);
+              // add the image to the database in the picture column
+              // with the new filename
+              $emoji->picture = $filename;
+          }
         $emoji->save();
         $session = $request->session()->flash('message', 'Emoji added successfully!');
 

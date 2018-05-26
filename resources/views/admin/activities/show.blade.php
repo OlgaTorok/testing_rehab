@@ -29,7 +29,7 @@
                                 <td>{{ $activity->category->cat_name }}</td>
                             </tr>
 
-                            <tr>
+                            {{-- <tr>
                                 <td>Steps</td>
                                 <td>
                                     <table>
@@ -42,7 +42,7 @@
                                         </tbody>
                                     </table>
                                 </td>
-                            </tr>
+                            </tr> --}}
                             
                             <tr>
                                 <td>Picture</td>

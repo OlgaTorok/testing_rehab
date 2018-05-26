@@ -27,14 +27,14 @@
                             <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" />
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                           <label for="tip_id">Tip</label>
                           <select class="form-control" id="tip_id" name="tip_id">
                           @foreach ($tips as $tip)
                               <option value="{{ $tip->id }}" {{ (old('tip_id') == $tip->id)?"selected":"" }}>{{ $tip->description }}</option>
                           @endforeach
                           </select>
-                        </div>
+                        </div> --}}
 
                         <a href="{{ route('admin.steps.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>

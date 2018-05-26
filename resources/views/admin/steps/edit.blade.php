@@ -30,10 +30,10 @@
                         </div>
 
                         <!-- OT - tip->description here -->
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="tip_id">Tip</label>
                             <input type="text" class="form-control" id="tip_id" name="tip_id" value="{{ old('tip_id', $step->tip->description) }}" />
-                        </div>
+                        </div> --}}
 
                         <a href="{{ route('admin.steps.show', array('step' => $step)) }}" class="btn btn-default">Back</a>
                         <a href="{{ route('admin.steps.index') }}" class="btn btn-default">Cancel</a>

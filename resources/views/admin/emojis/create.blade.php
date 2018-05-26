@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             <label for="picture">Image</label>
-                            <input type="text" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
+                            <input type="file" class="form-control" id="picture" name="picture" value="{{ old('picture') }}" />
                         </div>
                         <a href="{{ route('admin.emojis.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>

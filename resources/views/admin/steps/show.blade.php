@@ -17,10 +17,10 @@
                                 <td>{{ $step->description }}</td>
                             </tr>
 
-                            <tr>
+                            {{-- <tr>
                                 <td>Tip</td>
                                 <td>{{ $step->tip->description }}</td>
-                            </tr>
+                            </tr> --}}
 
                         </tbody>
                     </table>
