@@ -38,15 +38,14 @@ class LoginController extends Controller
     }
 
     public function redirectTo() {
-
         $user = $this->guard()->user();
         
         if ($user->hasRole('admin')) {
-            $this->redirectTo = '/admin/home';
+            $home = '/admin/home';
         }
         else if ($user->hasRole('user')) {
-            $this->redirectTo = '/user/home';
+            $home = '/user/home';
         }
-        return $this->redirectTo;
+        return $home;
     }
 }

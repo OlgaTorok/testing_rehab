@@ -22,16 +22,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $user = Auth::user();
-
+        $user = $request->user();
         if ($user->hasRole('admin')) {
-            $redirectTo = 'admin.home';
+            $home = 'admin.home';
         }
         else if ($user->hasRole('user')) {
-            $redirectTo = 'user.home';
+            $home = 'user.home';
         }
-        return redirect()->route($redirectTo);
+        return redirect()->route($home);
     }
 }

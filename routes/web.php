@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Separate controllers for admin and user
 Route::get('/admin/home', 'Admin\HomeController@index')->name('admin.home');
-Route::get('/user/home', 'User\HomeController@index')->name('user.home');
+Route::get('/user/home',  'User\HomeController@index' )->name('user.home');
 
 
 

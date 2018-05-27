@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -67,21 +68,22 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-        $user->roles()->attach(Role::where('name', 'admin')->first());
+
+        $user->roles()->attach(Role::where('name', 'user')->first());
         return $user;
+        
     }
 
     // when users register
     public function redirectTo() {
-
         $user = $this->guard()->user();
-
+        
         if ($user->hasRole('admin')) {
-            $this->redirectTo = '/admin/home';
+            $home = '/admin/home';
         }
         else if ($user->hasRole('user')) {
-            $this->redirectTo = '/user/home';
+            $home = '/user/home';
         }
-        return $this->redirectTo;
+        return $home;
     }
 }

@@ -36,4 +36,16 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function redirectTo() {
+        $user = $this->guard()->user();
+        
+        if ($user->hasRole('admin')) {
+            $home = '/admin/home';
+        }
+        else if ($user->hasRole('user')) {
+            $home = '/user/home';
+        }
+        return $home;
+    }
 }
