@@ -35,7 +35,7 @@
                                     <td>{{ $category->cat_name }}</td>
                                     <td>
                                         <a href="{{ route('admin.categories.edit', array('category' => $category)) }}"
-                                               class="btn btn-primary">Edit</a>
+                                               class="btn btn-warning">Edit</a>
                                         <form style="display:inline-block" method="POST" action="{{ route('admin.categories.destroy', array('category' => $category)) }}">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">

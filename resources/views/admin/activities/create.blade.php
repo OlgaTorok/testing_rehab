@@ -82,7 +82,6 @@
 
 
                         <a href="{{ route('admin.activities.index') }}" class="btn btn-default">Cancel</a>
-                        <a href="{{ route('admin.steps.create') }}" class="btn btn-default">Add Steps</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
 
                     </form>

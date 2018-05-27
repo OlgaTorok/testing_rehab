@@ -31,7 +31,7 @@
                                 <td width="85%">{{ $tips->description }}</td>
                                 <td width="15%">
                                     <a href="{{ route('admin.tips.edit', array('tips' => $tips)) }}"
-                                           class="btn btn-primary">Edit</a>
+                                           class="btn btn-warning">Edit</a>
                                     <form style="display:inline-block" method="POST" action="{{ route('admin.tips.destroy', array('tips' => $tips)) }}">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

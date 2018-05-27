@@ -30,14 +30,15 @@
                                         <td>{{ $step->description }}</td>
                                         <!-- Here we add the code for the tip description -->
 
-                                        <td>
-                                            <a href="{{ route('admin.steps.show', array('step' => $step)) }}" class="btn btn-default">View</a>
-                                            <!-- <a href="{{ route('admin.steps.edit', array('step' => $step)) }}" class="btn btn-warning">Edit</a>
-                                            <form style="display:inline-block" method="POST" action="{{ route('admin.steps.destroy', array('step' => $step)) }}">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" class="form-control btn btn-danger">Delete</a>
-                                            </form> -->
+                                        <td style="width: 150px;">
+                                            {{-- <a href="{{ route('admin.steps.show', array('step' => $step)) }}" class="btn btn-default">View</a> --}}
+                                            <a href="{{ route('admin.steps.edit', array('step' => $step)) }}"
+                                                class="btn btn-warning">Edit</a>
+                                             <form style="display:inline-block" method="POST" action="{{ route('admin.steps.destroy', array('step' => $step )) }}">
+                                                 <input type="hidden" name="_method" value="DELETE">
+                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                 <button type="submit" class="form-control btn btn-danger">Delete</a>
+                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -33,7 +33,7 @@
 
                                       <td>
                                             <a href="{{ route('admin.emojis.edit', array('emoji' => $emoji)) }}"
-                                                   class="btn btn-primary">Edit</a>
+                                                   class="btn btn-warning">Edit</a>
                                             <form style="display:inline-block" method="POST" action="{{ route('admin.emojis.destroy', array('emoji' => $emoji)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

@@ -32,7 +32,7 @@
                                         <td>{{ $level->name }}</td>
                                         <td>
                                             <a href="{{ route('admin.levels.edit', array('level' => $level)) }}"
-                                                   class="btn btn-primary">Edit</a>
+                                                   class="btn btn-warning">Edit</a>
                                             <form style="display:inline-block" method="POST" action="{{ route('admin.levels.destroy', array('level' => $level)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
