@@ -33,7 +33,7 @@ class Activity extends Model
         return $this->belongsTo('App\Emoji');
     }
 
-    public function tip(){
-        return $this->belongsTo('App\Tip');
+    public function tips(){
+        return $this->hasMany('App\Tip');
     }
 }

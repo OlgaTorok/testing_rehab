@@ -30,7 +30,7 @@
                 </div>
                 <div class="panel-body">
                     <!--Title-->
-                    <h1 class="card-title">{{ $activity->title }}</h1>
+                    <h1 class="card-title" style="color: tomato;">{{ $activity->title }}</h1>
                     <hr class="hr-light">
                     <!--Text-->
                     <ul class="list-group list-group-flush ">
@@ -45,7 +45,15 @@
                             @if (count($activity->steps) == 0)
                                 <p>There are no steps for this activity</p>
                             @else
-                                <p class="card-text">{{ $step->description }}</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 30px; vertical-align: top;"><i class="fas fa-arrow-circle-right" style="font-size:1em; color:Tomato"></i> </td>
+                                        <td>{{ $step->description }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                {{-- <p class="card-text"> <i class="fas fa-arrow-circle-right" style="font-size:1em; color:Tomato"></i> {{ $step->description }}</p> --}}
                                 @endif
                         @endforeach
                         <hr class="hr-light">
@@ -53,9 +61,9 @@
                             <p style="text-align: center;"><b>How did the activity go?</b></p>
                             <div class="row">
                                 <div class="rate" style="text-align: center">
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Too easy</button></div>
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Just Right</button></div>
-                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="">Too Hard</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Do it again!">Too easy</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Well done!">Just Right</button></div>
+                                    <div class="col-xs-4 col-md-4 col-lg-4"><button type="button" class="btn btn-info tip-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Do only what is easy for child">Too Hard</button></div>
                                 </div>
                             </div>
                         </p>

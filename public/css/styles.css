@@ -11,7 +11,7 @@
     border-bottom: none;
 }
 
-h4.card-title {
+.card-title {
     font-weight: bold;
     color: #ff5b05;
 }

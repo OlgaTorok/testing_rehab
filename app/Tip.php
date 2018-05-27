@@ -19,6 +19,11 @@ class Tip extends Model
 
     public function step()
     {
-    	return $this->hasOne('App\Step');
+    	return $this->belongsTo('App\Step');
+    }
+
+    public function activities()
+    {
+        return $this->belongsTo('App\Activity');
     }
 }
