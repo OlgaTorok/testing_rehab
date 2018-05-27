@@ -40,11 +40,14 @@
                     @if ($activity->category_id == $category->id)
                     <div class="col-3 col-sm-6 col-md-4 col-lg-3">
                         <div class="card card-menu">
-                            <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" />
+                            <a href="{{ route('user.activities.show', $activity->id) }}">
+                                <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" />
+                            </a>
+                            
                             <div class="card-body" style="padding: 10px;">
                                 <h4 class="card-title">{{ $activity->title }}</h4>
                                 <p class="card-text">{{ $activity->short_descript }}</p>
-                                <a href="{{ route('user.activities.show', $activity->id) }}" class="btn btn-primary">Go</a>
+                                {{-- <a href="{{ route('user.activities.show', $activity->id) }}" class="btn btn-info" style="width: 100%;">View</a> --}}
                             </div>  <!-- end card-body -->
                         </div>  <!-- end col-3 -->
                     </div>  <!-- end col-3 col-sm-6 col-md-4 col-lg-3 -->

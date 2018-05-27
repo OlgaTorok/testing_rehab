@@ -20,12 +20,14 @@
                         <p>There are no activities!</p>
                     @else
                         <table class="table table-responsive table-hover ">
-                            <thead>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Level</th>
-                                <th>Category</th>
-                                <th>Action</th>
+                            <thead class="">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Level</th>
+                                    <th>Category</th>
+                                    <th>Action</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach ($activities as $activity)

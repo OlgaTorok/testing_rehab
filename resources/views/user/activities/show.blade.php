@@ -26,7 +26,7 @@
         <div class="col-md-9">
             <div class="panel panel-default" style="box-shadow: 2px 5px 8px #dadddf;">
                 <div class="panel-heading">
-                    <!-- <img class="card-img-top" src="{{ url('../public/img/robot.png') }}" alt="Card image cap" style="width: 100%" /> -->
+                    <a href="{{ route('user.activities.index') }}" class="btn btn-default">Back</a>
                 </div>
                 <div class="panel-body">
                     <!--Title-->
@@ -50,6 +50,7 @@
                                     <tr>
                                         <td style="width: 30px; vertical-align: top;"><i class="fas fa-arrow-circle-right" style="font-size:1em; color:Tomato"></i> </td>
                                         <td>{{ $step->description }}</td>
+                                        <br/>
                                     </tr>
                                 </tbody>
                             </table>
@@ -78,19 +79,12 @@
                 <div class="card" style="box-shadow: 2px 5px 8px #dadddf; padding: 10px;">
                     <div class="card-body">
                         <h4 class="card-title">Related Activities</h4>
-                        @foreach(Auth::user()->activities()->where('activity_id', $activity->id)->get() as $activity)
-                            <a href="#" class="card-link">{{ $activity->title }}</a><br />
+                        @foreach(Auth::user()->activities()->get() as $activity)
+                            <a href="{{ route('user.activities.show',$activity->id) }}" class="card-link">{{ $activity->title }}</a><br />
                         @endforeach
                     </div>
                 </div>  <!-- End card -->
             </div>
-
-
-
-
-
-
-
         </div>  <!-- End sidebar -->
 
     </div><!-- end row -->
