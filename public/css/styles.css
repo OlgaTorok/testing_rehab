@@ -10,10 +10,17 @@
     border-bottom: none;
 }
 
-.card-title {
+.orange{
     font-weight: bold;
     color: #ff5b05;
 }
+
+.info {
+    background-color: #f1f1f1;
+    padding: 30px 60px;
+}
+
+
 
 /* .card {
     position: relative;

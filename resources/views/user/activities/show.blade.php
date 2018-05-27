@@ -30,7 +30,7 @@
                 </div>
                 <div class="panel-body">
                     <!--Title-->
-                    <h1 class="card-title" style="color: tomato;">{{ $activity->title }}</h1>
+                    <h1 class="card-title orange">{{ $activity->title }}</h1>
                     <hr class="hr-light">
                     <!--Text-->
                     <ul class="list-group list-group-flush ">
@@ -48,7 +48,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td style="width: 30px; vertical-align: top;"><i class="fas fa-arrow-circle-right" style="font-size:1em; color:Tomato"></i> </td>
+                                        <td style="width: 30px; vertical-align: top;"><i class="fas fa-arrow-circle-right orange" style="font-size:1em;"></i> </td>
                                         <td>{{ $step->description }}</td>
                                         <br/>
                                     </tr>
@@ -78,7 +78,7 @@
             <div class="sidebar-module">
                 <div class="card" style="box-shadow: 2px 5px 8px #dadddf; padding: 10px;">
                     <div class="card-body">
-                        <h4 class="card-title">Related Activities</h4>
+                        <h4 class="card-title orange">Related Activities</h4>
                         @foreach(Auth::user()->activities()->get() as $activity)
                             <a href="{{ route('user.activities.show',$activity->id) }}" class="card-link">{{ $activity->title }}</a><br />
                         @endforeach

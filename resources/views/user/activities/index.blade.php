@@ -45,7 +45,7 @@
                             </a>
                             
                             <div class="card-body" style="padding: 10px;">
-                                <h4 class="card-title">{{ $activity->title }}</h4>
+                                <h4 class="card-title orange">{{ $activity->title }}</h4>
                                 <p class="card-text">{{ $activity->short_descript }}</p>
                                 {{-- <a href="{{ route('user.activities.show', $activity->id) }}" class="btn btn-info" style="width: 100%;">View</a> --}}
                             </div>  <!-- end card-body -->
