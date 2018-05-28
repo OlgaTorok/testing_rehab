@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2">
 
             @if (Session::has('message'))
                 <p class="alert alert-success">{{ Session::get('message')}} </p>

@@ -1,9 +1,8 @@
 .card {
     position: relative;
     background-color: #fff;
-    /* border: 1px solid #eee; */
     margin-bottom: 30px;
-    box-shadow: none;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
 }
 
 .navbar {

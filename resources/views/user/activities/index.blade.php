@@ -41,7 +41,7 @@
                     <div class="col-3 col-sm-6 col-md-4 col-lg-3">
                         <div class="card card-menu">
                             <a href="{{ route('user.activities.show', $activity->id) }}">
-                                <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%" />
+                                <img class="card-img-top" src="{{ asset('images/' . $activity->picture) }}" alt="Card image cap" style="width: 100%;" />
                             </a>
                             
                             <div class="card-body" style="padding: 10px;">
