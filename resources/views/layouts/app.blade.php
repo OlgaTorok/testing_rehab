@@ -58,8 +58,8 @@
                                 <li><a href="{{ route('admin.tips.index') }}"><i class="fa fa-edit" aria-hidden="true"></i> Tips </a></li>
                                 <li><a href="{{ route('admin.categories.index') }}"><i class="fa fa-book" aria-hidden="true"></i> Categories </a></li>
                                 <li><a href="{{ route('admin.levels.index') }}"><i class="fa fa-server" aria-hidden="true"></i> Levels </a></li>
-                                <li><a href="{{ route('admin.ratings.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Ratings </a></li>
-                                <li><a href="{{ route('admin.emojis.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Emoji </a></li>
+                                {{-- <li><a href="{{ route('admin.ratings.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Ratings </a></li>
+                                <li><a href="{{ route('admin.emojis.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Emoji </a></li> --}}
 
                             @elseif (Auth::user()->hasRole('user'))
                                 <li><a href="{{ route('user.activities.index') }}"><i class="fa fa-child" aria-hidden="true"></i> Activities </a></li>

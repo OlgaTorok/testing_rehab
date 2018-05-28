@@ -37,16 +37,18 @@
                     </table>
 
                     <a href="{{ route('admin.users.index') }}" class="btn btn-default">Back</a>
-                     <!-- <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
-                       class="btn btn-warning">Edit</a> -->
-                    <!-- <form style="display:inline-block"
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                    {{-- <a href="{{ route('admin.users.edit', array('user' => $user)) }}"
+                       class="btn btn-warning">Edit</a>
+                    <form style="display:inline-block"
                           method="POST"
                           action="{{ route('admin.users.destroy', array('user' => $user)) }}">
 
                           <input type="hidden" name="_method" value="DELETE">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <a type="submit" class="form-control btn btn-danger">Delete</a>
-                    </form> -->
+                    </form> --}}
 
 
                     <h3>Activities</h3>
