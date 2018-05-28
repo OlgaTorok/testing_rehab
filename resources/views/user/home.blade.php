@@ -23,22 +23,27 @@
 
             <div class="info">
                 <p>The Objectives of the <b class="orange">Paediatric Programme</b> are:</p>
-                    <ul class="fa-ul">
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To achieve the maximum rehabilitation potential of each child – physically, emotionally and cognitively.</li>
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To involve the children/young people and their families/carers in the rehabilitation process.</li>
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To support the reintegration of the child/young person into his/her home, school and the wider community.</li>
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To help and support the child/young person and his/herfamily to adjust to loss, changed self image and abilities.</li>
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To liaise and advocate with Health, Therapeutic and Education Authorities in the young person’s local communities
-                            regarding their ongoing rehabilitation needs.</li>
-                        <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To offer rehabilitation training and education to family/carers/Teachers/Special Needs Assistants and Personal Assistants
-                            and other service providers.</li>
-                    </ul>
-                 
+                <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To achieve the maximum rehabilitation potential of each child – physically, emotionally and cognitively.</li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To involve the children/young people and their families/carers in the rehabilitation process.</li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To support the reintegration of the child/young person into his/her home, school and the wider community.</li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To help and support the child/young person and his/herfamily to adjust to loss, changed self image and abilities.</li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To liaise and advocate with Health, Therapeutic and Education Authorities in the young person’s local communities
+                        regarding their ongoing rehabilitation needs.</li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span>To offer rehabilitation training and education to family/carers/Teachers/Special Needs Assistants and Personal Assistants
+                        and other service providers.</li>
+                </ul>
+                <p>The full <a href="http://www.nrh.ie/wp-content/uploads/2017/04/Scope-of-Service-for-PAEDIATRIC-PROGRAMME-March-17.pdf" target="_blank">Paediatric Programme Scope of Service</a> is detailed in the linked document.</p>
+                
+                <p>Other activity resources are:</p>
+                <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span><a href="https://www.vroom.org/" target="_blank">Vroom</a></li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span><a href="https://www.playfullyapp.com/" target="_blank">Playfully</a></li>
+                    <li><span class="fa-li"><i class="fas fa-long-arrow-alt-right orange"></i></span><a href="http://kinedu.com/en">Kinedu</a></li>
+                </ul>
             </div>
-                    
         </div>
     </div>
-
     <hr>
     <!-- Site footer -->
     <footer class="footer">

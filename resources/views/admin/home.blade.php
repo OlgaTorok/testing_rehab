@@ -14,20 +14,10 @@
                         </div>
                     @endif
                     <div class="jumbotron text-center">
-                        <p>The Objectives of the <b>Paediatric Programme</b> are to achieve the maximum rehabilitation
-                            potential of each child – physically, emotionally and cognitively, to involve the
-                            children/young people and their families/carers in the rehabilitation process,
-                            to support the reintegration of the child/young person into his/her home, school
-                            and the wider community, to help and support the child/young person and his/her
-                            family to adjust to loss, changed self image and abilities, to liaise and advocate
-                            with Health, Therapeutic and Education Authorities in the young person’s local communities
-                            regarding their ongoing rehabilitation needs, to offer rehabilitation training and
-                            education to family/carers/Teachers/Special Needs Assistants and Personal Assistants
-                            and other service providers.</p>
-                        <p class="lead">
-                            <a class="btn btn-primary btn-lg" target="blank" href="http://www.nrh.ie/rehabilitation-programmes-services/paediatric-family-centred-rehabilitation/" role="button">Learn more</a>
-                        </p>
-                      </div>
+                        <h2>Welcome to NRH Application</h2>
+                        <p>As therapist you will have the rights to add activities and 
+                            assign them to parents to use in the childs' rehabilitation. </p>
+                    </div>
                 </div>
             </div>
         </div>
